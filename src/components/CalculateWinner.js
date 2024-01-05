@@ -14,7 +14,7 @@ const CalculateWinner = (squares) =>{
       [2,4,6]
     ]
   
-    for(let i=0;i<lines.length;i++){
+    for(let i=0;i<winningLines.length;i++){
       const [firstSquare,secondSquare,thirdSquare] =winningLines[i];
       if(squares[firstSquare] && squares[firstSquare]==squares[secondSquare] && squares[secondSquare]==squares[thirdSquare]){
         return squares[firstSquare];
