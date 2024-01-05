@@ -3,7 +3,7 @@ import React from "react";
 const CalculateWinner = (squares) =>{
 
     //defining all the winning possibilities
-    const lines =[
+    const winningLines =[
       [0,1,2],
       [3,4,5],
       [6,7,8],
@@ -15,9 +15,9 @@ const CalculateWinner = (squares) =>{
     ]
   
     for(let i=0;i<lines.length;i++){
-      const [a,b,c] =lines[i];
-      if(squares[a] && squares[a]==squares[b] && squares[b]==squares[c]){
-        return squares[a];
+      const [firstSquare,secondSquare,thirdSquare] =winningLines[i];
+      if(squares[firstSquare] && squares[firstSquare]==squares[secondSquare] && squares[secondSquare]==squares[thirdSquare]){
+        return squares[firstSquare];
       }
     }
     return null;
